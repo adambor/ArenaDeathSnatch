@@ -1,0 +1,11 @@
+name: ArenaDeathSnatch
+main: mc.adambor.ArenaDS.Main
+version: 0.0.1
+author: adambor
+depend: [BattleArena]
+description: Version 0.0.1 of ArenaDeathSnatch
+commands:
+  ads:
+    description: Arena Death Snatch
+    aliases: [ads]
+    usage: /ads <sub-command>

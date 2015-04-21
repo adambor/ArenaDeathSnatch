@@ -1,0 +1,69 @@
+## This should be placed in the plugin directory
+## for more help configuring see the wiki
+## https://github.com/alkarinv/BattleArena/wiki
+## Change this file to customize your event
+
+ArenaDeathSnatch:
+  prefix: '&6[DeathSnatch]&e'
+  signDisplayName: '&6[DeathSnatch]'
+  cmd: ads
+  gameSize:
+    nTeams: '2'
+    teamSize: '1+'
+  nLives: 'infinite'
+  victoryCondition: Custom
+  times: {}
+  tracking:
+    database: ds
+    rated: true
+    useTrackerMessages: false
+  defaults:
+    options:
+    - woolTeams
+  onEnter:
+    options:
+    - storeExperience
+    - storeGamemode
+    - storeItems
+    - storeHealth
+    - storeHunger
+    - storeMagic
+    - storeHeroClass
+    - clearInventory
+    - clearExperience
+    - deEnchant
+    - gameMode=SURVIVAL
+    - flightOff
+  onLeave:
+    options:
+    - restoreExperience
+    - restoreGamemode
+    - restoreItems
+    - restoreHealth
+    - restoreHunger
+    - restoreMagic
+    - restoreHeroClass
+    - clearInventory
+    - deEnchant
+  onStart:
+    options:
+    - teleportIn
+    - pvpOn
+    - blockBreakOff
+  onComplete:
+    options:
+    - teleportOut
+  onSpawn:
+    giveClass:
+      default: gladiator
+    options:
+    - health=20
+    - hunger=20
+    - respawnWithClass
+  onDeath:
+    options:
+    - clearInventory
+  winner:
+    options:
+    - health=20
+    - hunger=20
