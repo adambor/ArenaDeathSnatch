@@ -45,7 +45,6 @@ public class ArenaDeathSnatch extends Arena {
 	}
 	private void initEff() {
 		eff = new BukkitRunnable(){
-			@Override
 			public void run() {
 				for(Item i:itm){
 					if(i != null){
@@ -67,6 +66,8 @@ public class ArenaDeathSnatch extends Arena {
 	public void onDeath(PlayerDeathEvent evnt){
 		ArenaPlayer ap = BattleArena.toArenaPlayer(evnt.getEntity());
 		Item item = ap.getLocation().getWorld().dropItem(ap.getLocation(), ap.getTeam().getHeadItem());
+		item.setCustomName(ap.getTeam().getTeamChatColor()+"Tesseract");
+		item.setCustomNameVisible(true);
 		items.put(item, ap.getTeam());
 		itm.add(item);
 	}

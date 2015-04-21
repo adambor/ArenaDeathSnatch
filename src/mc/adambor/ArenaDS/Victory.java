@@ -66,12 +66,10 @@ public class Victory extends VictoryCondition implements DefinesLeaderRanking{
 		return scores.addPoints(team, 1);
 	}
 
-	@Override
 	public List<ArenaTeam> getLeaders() {
 		return scores.getLeaders();
 	}
 
-	@Override
 	public TreeMap<?, Collection<ArenaTeam>> getRanks() {
 		return scores.getRanks();
 	}
